@@ -63,27 +63,35 @@ function generateImage(){
 
     if (mainType === "warm") {
         idea = "Paint a glowing sunset or fire-lit scene";
-        image = "https://images.unsplash.com/photo-1501973801540-527f08ccae7b";
-    }
-
-    else if (mainType === "cool") {
+        image = "https://images.unsplash.com/photo-1501973801540-527f08ccae7b"; 
+    } else if (mainType === "cool") {
         idea = "Create a calm ocean or sky artwork";
-        image ="https://images.unsplash.com/photo-1507525428034-b723cf961d3e";
-    }
-    else if (mainType === "pastel") {
+        image = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"; 
+    } else if (mainType === "pastel") {
         idea = "Design a soft dreamy pastel piece";
-        image = "https://images.unsplash.com/photo-1492724441997-5dc865305da7";
-    }
-    else if (mainType === "dark") {
+        image = "https://images.unsplash.com/photo-1492724441997-5dc865305da7"; 
+    } else if (mainType === "dark") {
         idea = "Paint a moody night scene";
-        image = "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee";
-    }
-    else {
-        idea = "Create an abstract colorful painting ";
-        image = "https://images.unsplash.com/photo-1500534623283-312aade485b7";
+        image = "https://images.unsplash.com/photo-1503437313881-503a91226419"; 
+    } else if (mainType === "neutral") {
+        idea = "Create an abstract colorful painting";
+        image = "https://images.unsplash.com/photo-1500534623283-312aade485b7"; 
+    } else {
+        idea = "Choose a palette to get inspired!";
+        image = "";
     }
 
-    // 8. Display results
+    // Display the idea text
     document.getElementById("result").innerText = idea;
-    document.getElementById("image").src = image;
-}
+
+    // Display the image if available
+    const imgContainer = document.getElementById("imageResult");
+    imgContainer.innerHTML = "";
+    if (image) {
+        const img = document.createElement("img");
+        img.src = image;
+        img.alt = idea;
+        img.style.maxWidth = "400px";
+        img.style.borderRadius = "10px";
+        imgContainer.appendChild(img);
+    }
