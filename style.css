@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    transition:cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+}
+
+.container {
+    margin-top:25px;
+}
+
+h1{ 
+    color:purple;
+}
+
+p{
+    color: black;
+
+}
+
+.colors input{
+    width: 20px;
+    height: 15px;
+    margin: 10px;
+    border: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: pink;
+    color: #ff6f91;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.result{
+    margin-top:20px;
+}
+
+#palette{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
