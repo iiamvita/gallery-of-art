@@ -53,24 +53,22 @@ function generateImage() {
     let image = "";
 
     if (mainType === "warm") {
-        idea = "Paint a glowing sunset or fire-lit scene";
-        image = "https://faustgallery.com/wp-content/uploads/2020/07/James-Kirkland-Chief-Red-Cloud.jpg";
-    } else if (mainType === "cool") {
-        idea = "Create a calm ocean or sky artwork";
-        image = "https://mir-s3-cdn-cf.behance.net/project_modules/1400/1c3c1a66571057.5b0f3f3f3e9f1.jpg";
-    } else if (mainType === "pastel") {
-        idea = "Design a soft dreamy pastel piece";
-        image = "https://cdn.pixabay.com/photo/2017/08/30/01/05/sky-2695569_1280.jpg";
-    } else if (mainType === "dark") {
-        idea = "Paint a moody night scene";
-        image = "https://paintingvalley.com/dark-night-painting/dark-night-painting-1.jpg";
-    } else if (mainType === "neutral") {
-        idea = "Create an abstract colorful painting";
-        image = "https://www.artworks.ae/cdn/shop/products/Beige-Abstract-Wall-Art.jpg";
-    } else {
-        idea = "Choose a palette to get inspired!";
-        image = "";
-    }
+    idea = "Paint a glowing sunset or fire-lit scene";
+    image = "https://upload.wikimedia.org/wikipedia/commons/0/0c/Red_sunset.jpg";
+} else if (mainType === "cool") {
+    idea = "Create a calm ocean or sky artwork";
+    image = "https://upload.wikimedia.org/wikipedia/commons/4/4d/Sea_and_sky.jpg";
+} else if (mainType === "pastel") {
+    idea = "Design a soft dreamy pastel piece";
+    image = "https://cdn.pixabay.com/photo/2017/08/30/01/05/sky-2695569_1280.jpg";
+} else if (mainType === "dark") {
+    idea = "Paint a moody night scene";
+    image = "https://cdn.pixabay.com/photo/2017/09/02/22/24/night-2701527_1280.jpg";
+} else {
+    idea = "Create an abstract colorful painting";
+    image = "https://cdn.pixabay.com/photo/2016/11/29/09/32/abstract-1867009_1280.png";
+}
+
 
     // Display the idea text
     document.getElementById("result").innerText = idea;
@@ -86,4 +84,7 @@ function generateImage() {
         img.style.borderRadius = "10px";
         imgContainer.appendChild(img);
     }
+
+    // Debug line (optional)
+    console.log("Detected type:", mainType);
 }
